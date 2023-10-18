@@ -7,15 +7,20 @@ use Illuminate\Http\Request;
 
 class BookController extends Controller
 {
+    public function index() { 
+        $books = Book::all();
+        return view("books", compact("books"));
+    }
 
     function get()
     {
         $books = Book::all();
 
+
         return response()->json(
             [
                 "message" => "GET method suceess",
-                "data" => $books
+                "data"=> $books
             ]
         );
     }
