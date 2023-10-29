@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BookController;
+use App\Models\Book;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home', [
-        "title" => "Home"
+        "title" => "Home",
+        "books" => Book::all(),
     ]);
 });
 Route::get('/about', function () {
@@ -25,6 +27,14 @@ Route::get('/about', function () {
     ]);
 });
 
-
 Route::get('/books', [BookController::class,'index']);
 
+// single book route
+Route::get('/books/{id}', function($id) {
+    $selected_book = Book::where('id', $id)->first();
+
+    return view('book', [
+        'title' => 'Book',
+        "book" => $selected_book
+    ]);
+});
