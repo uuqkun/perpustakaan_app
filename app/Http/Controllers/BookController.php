@@ -14,6 +14,13 @@ class BookController extends Controller
         ]);
     }
 
+    public function show($id) { 
+        return view('book', [
+            'title' => 'Book',
+            "book" => Book::find($id)
+        ]);
+    }
+
 
     function post(Request $request)
     {
