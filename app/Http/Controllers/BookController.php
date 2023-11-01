@@ -26,9 +26,10 @@ class BookController extends Controller
     {
         $books = new Book;
         $books->title = $request->title;
-        $books->author = $request->author;
-        $books->genre = $request->genre;
-        $books->yearPublished = $request->yearPublished;
+        $books->subtitle = $request->subtitle;
+        $books->authors = $request->authors;
+        $books->image = $request->image;
+        $books->url = $request->url;
         $books->checkedOut = $request->checkedOut;
 
         $books->save();

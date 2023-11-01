@@ -12,9 +12,12 @@
             <tr>
                 <th>ID</th>
                 <th>Title</th>
-                <th>Author</th>
-                <th>Genre</th>
-                <th>Year published</th>
+                <th>SubTitle</th>
+                <th>Authors</th>
+                <th>image</th>
+                <th>url</th>
+                <th>Availability</th>
+
             </tr>
         </thead>
         <tbody>
@@ -22,9 +25,11 @@
                 <tr>
                     <td>{{ $book->id }}</td>
                     <td>{{ $book->title }}</td>
-                    <td>{{ $book->author }}</td>
-                    <td>{{ $book->genre }}</td>
-                    <td>{{ $book->yearPublished }}</td>
+                    <td>{{ $book->subtitle }}</td>
+                    <td>{{ $book->authors }}</td>
+                    <td>{{ $book->image }}</td>
+                    <td>{{ $book->url }}</td>
+                    <td>{{ $book->availability }}</td>
                 </tr>
             @endforeach
         </tbody>
