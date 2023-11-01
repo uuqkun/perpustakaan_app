@@ -30,8 +30,8 @@
 
 <body class="font-raleway">
     @include('partials.navbar')
-    <main class="container w-[80%] mx-auto ">
-        <section>
+    <main class="container mx-auto">
+        <section class="w-full">
             @yield('container')
         </section>
     </main>

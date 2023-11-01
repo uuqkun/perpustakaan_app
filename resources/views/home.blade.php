@@ -2,7 +2,7 @@
 
 @section('container')
     <h1 class="font-bold text-[24px] mb-10">List of Books</h1>
-    <ul class="flex gap-6 flex-wrap">
+    <ul class="flex gap-6 flex-wrap w-full justify-evenly">
         @foreach ($books as $book)
             <article class="w-[20%] bg-gray-100 rounded-2xl p-6 transition-all hover:scale-105 hover:bg-gray-300">
                 <div class="w-full bg-white rounded-xl overflow-hidden mb-20">
