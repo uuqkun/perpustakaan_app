@@ -31,10 +31,8 @@ Route::get('/books', [BookController::class,'index']);
 
 // single book route
 Route::get('/books/{id}', function($id) {
-    $selected_book = Book::where('id', $id)->first();
-
     return view('book', [
         'title' => 'Book',
-        "book" => $selected_book
+        "book" => Book::find($id)
     ]);
 });

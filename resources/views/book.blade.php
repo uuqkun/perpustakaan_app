@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('container')
-    <article>
+    <article class="mb-20">
         <h3>
             {{ $book->title }}
         </h3>
@@ -12,5 +12,5 @@
         </span>
     </article>
 
-    <a href="/">Back to Home</a>
+    <a href="/" class=" px-6 py-4 bg-gray-200 rounded-xl hover:bg-gray-300">Back to Home</a>
 @endsection
