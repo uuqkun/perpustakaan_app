@@ -10,21 +10,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Raleway:ital,wght@0,100;0,300;0,400;0,600;0,700;1,500&display=swap"
         rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                fontFamily: {
-                    raleway: ["Raleway", "sans-serif"]
-                }
-                extend: {
-                    colors: {
-                        clifford: '#da373d',
-                    }
-                }
-            }
-        }
-    </script>
     <title>Perpustakaan || {{ $title }}</title>
 </head>
 
