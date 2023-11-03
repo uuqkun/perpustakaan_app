@@ -10,10 +10,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Raleway:ital,wght@0,100;0,300;0,400;0,600;0,700;1,500&display=swap"
         rel="stylesheet">
+        @vite('resources/css/app.css')
     <title>Perpustakaan || {{ $title }}</title>
 </head>
 
-<body class="font-raleway">
+<body class="font-raleway"> 
     @include('partials.navbar')
     <main class="container mx-auto">
         <section class="w-full">
