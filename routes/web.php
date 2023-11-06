@@ -16,18 +16,36 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home', [
-        "title" => "Home",
-        "books" => Book::all(),
-    ]);
+    return view('welcome', ['title' => 'Welcome']);
 });
-Route::get('/about', function () {
-    return view('about', [
-        'title'=> 'About'
+
+Route::get('/buku', function () {
+    $buku = [
+        [
+            'id' => 1,
+            'title' => "Tales of Arise",
+            'author' => 'Anonymous'
+        ],
+        [
+            'id' => 2,
+            'title' => "Tales of Zesttria",
+            'author' => 'Anonymous'
+        ],
+        [
+            'id' => 1,
+            'title' => "Tales of Berseria",
+            'author' => 'Anonymous'
+        ],
+    ];
+
+
+
+    return view('buku', [
+        'title' => 'List of Books',
+        'buku' => $buku,
     ]);
 });
 
-Route::get('/books', [BookController::class,'index']);
 
-// single book route
-Route::get('/books/{ id}', [BookController::class,'show']);
+
+

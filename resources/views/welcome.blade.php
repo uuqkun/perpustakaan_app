@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>{{$title}}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -13,6 +13,6 @@
     </head>
     <body class="antialiased">
         <h1>welcome</h1>
-
+        <a href="/about">Go to About page</a>
     </body>
 </html>
