@@ -30,4 +30,4 @@ Route::get('/about', function () {
 Route::get('/books', [BookController::class,'index']);
 
 // single book route
-Route::get('/books/{id}', [BookController::class,'show']);
+Route::get('/books/{ id}', [BookController::class,'show']);
