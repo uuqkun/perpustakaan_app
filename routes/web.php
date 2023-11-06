@@ -24,25 +24,61 @@ Route::get('/buku', function () {
         [
             'id' => 1,
             'title' => "Tales of Arise",
-            'author' => 'Anonymous'
+            'author' => 'Anonymous',
+            'description' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi neque deserunt fuga? Nisi vel magni sunt nulla rem placeat et. Et doloremque expedita sunt quas, veniam ipsa laborum, repellendus cupiditate, exercitationem reprehenderit nemo tenetur eaque! Voluptatum illum sequi quae tenetur.'
         ],
         [
             'id' => 2,
             'title' => "Tales of Zesttria",
-            'author' => 'Anonymous'
+            'author' => 'Anonymous',
+            'description' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi neque deserunt fuga? Nisi vel magni sunt nulla rem placeat et. Et doloremque expedita sunt quas, veniam ipsa laborum, repellendus cupiditate, exercitationem reprehenderit nemo tenetur eaque! Voluptatum illum sequi quae tenetur.'
         ],
         [
-            'id' => 1,
+            'id' => 3,
             'title' => "Tales of Berseria",
-            'author' => 'Anonymous'
+            'author' => 'Anonymous',
+            'description' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi neque deserunt fuga? Nisi vel magni sunt nulla rem placeat et. Et doloremque expedita sunt quas, veniam ipsa laborum, repellendus cupiditate, exercitationem reprehenderit nemo tenetur eaque! Voluptatum illum sequi quae tenetur.'
         ],
     ];
 
-
-
     return view('buku', [
         'title' => 'List of Books',
-        'buku' => $buku,
+        'books' => $buku,
+    ]);
+});
+
+Route::get('/buku/{id}', function ($id) {
+    $buku = [
+        [
+            'id' => 1,
+            'title' => "Tales of Arise",
+            'author' => 'Anonymous',
+            'description' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi neque deserunt fuga? Nisi vel magni sunt nulla rem placeat et. Et doloremque expedita sunt quas, veniam ipsa laborum, repellendus cupiditate, exercitationem reprehenderit nemo tenetur eaque! Voluptatum illum sequi quae tenetur.'
+        ],
+        [
+            'id' => 2,
+            'title' => "Tales of Zesttria",
+            'author' => 'Anonymous',
+            'description' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi neque deserunt fuga? Nisi vel magni sunt nulla rem placeat et. Et doloremque expedita sunt quas, veniam ipsa laborum, repellendus cupiditate, exercitationem reprehenderit nemo tenetur eaque! Voluptatum illum sequi quae tenetur.'
+        ],
+        [
+            'id' => 3,
+            'title' => "Tales of Berseria",
+            'author' => 'Anonymous',
+            'description' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi neque deserunt fuga? Nisi vel magni sunt nulla rem placeat et. Et doloremque expedita sunt quas, veniam ipsa laborum, repellendus cupiditate, exercitationem reprehenderit nemo tenetur eaque! Voluptatum illum sequi quae tenetur.'
+        ],
+    ];
+
+    $selected = [];
+
+    foreach ($buku as $singleBook) {
+        if ($id == $singleBook['id']) {
+            $selected = $singleBook;
+        }
+    }
+
+    return view('singleBook', [
+        'book' => $buku
     ]);
 });
 
