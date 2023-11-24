@@ -15,6 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// login route
+Route::get('/login', function () {
+    return view('login', [
+        "title" => "Login",
+    ]);
+});
+
 Route::get('/', function () {
     return view('home', [
         "title" => "Home",
@@ -27,7 +34,9 @@ Route::get('/about', function () {
     ]);
 });
 
+// books route
 Route::get('/books', [BookController::class,'index']);
 
 // single book route
 Route::get('/books/{id}', [BookController::class,'show']);
+

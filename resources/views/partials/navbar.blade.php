@@ -9,6 +9,6 @@
                 <a href="/about" class="text-md {{ ($title === "About") ? "text-green-400" : "text-white"}}">About</a>
             </li>
         </ul>
-        <a href="#" class="px-4 py-2 bg-green-400 hover:bg-green-500 rounded-md text-white">Log In</a>
+        <a href="/login" class="px-4 py-2 bg-green-400 hover:bg-green-500 rounded-md text-white">Log In</a>
     </section>
 </nav>
