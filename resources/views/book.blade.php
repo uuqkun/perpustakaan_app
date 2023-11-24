@@ -3,7 +3,7 @@
 @section('container')
     <article class="mb-8 flex flex-col gap-4">
         <div class="w-[200px] bg-white rounded-xl overflow-hidden mb-20">
-            <img src={{ $book->image }} alt={{ $book->title }} class="bg-cover w-full h-full">
+            <img src={{ $book->image_url }} alt={{ $book->title }} class="bg-cover w-full h-full">
         </div>
         <p class="{{ $book->checkedOut === 1 ? 'bg-red-400' : 'bg-green-400' }} w-fit p-2 rounded-md text-xs text-gray-700">
             {{ $book->checkedOut === 1 ? 'Not Available' : 'Available' }}

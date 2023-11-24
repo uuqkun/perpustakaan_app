@@ -1,3 +1,4 @@
+
 @extends('layout.main')
 
 @section('container')
@@ -5,8 +6,8 @@
     <ul class="flex gap-6 flex-wrap w-full justify-evenly">
         @foreach ($books as $book)
             <article class="w-[20%] bg-gray-100 rounded-2xl p-6 transition-all hover:scale-105 hover:bg-gray-300">
-                <div class="w-full bg-white rounded-xl overflow-hidden mb-20">
-                    <img src={{ $book->image }} alt={{ $book->title }} class="bg-cover w-full h-full">
+                <div class="w-full bg-white rounded-xl overflow-hidden mb-10">
+                    <img src={{ $book->image_url }} alt={{ $book->title }} class="bg-cover w-full h-full">
                 </div>
                 <a href="/books/{{ $book['id'] }}" class="mb-2">
                     <h3 class="text-md font-semibold uppercase">
