@@ -21,7 +21,7 @@
             {{ $book->authors }}
         </p>
         <span class=""> 
-            <a href={{ $book->url }} class="text-sm mr-4 px-6 py-4 bg-blue-300 rounded-xl hover:bg-blue-400 hover:scale-105 transition-all">Visit Official site ></a>
+            <a href={{ $book->url }} target="_blank" class="text-sm mr-4 px-6 py-4 bg-blue-300 rounded-xl hover:bg-blue-400 hover:scale-105 transition-all">Visit Official site ></a>
             <a href="/" class="px-6 py-4 bg-gray-200 rounded-xl hover:bg-gray-300 hover:scale-105 transition-all">Back to Home</a>
         </span>
     </article>
